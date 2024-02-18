@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Drawing Game</title>
+  <style>
+    #canvas1 {
+        border: 1px solid rgb(235, 216, 216);
+        background: rgb(135, 206, 235);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #canvas2 {
+        border: 1px solid rgb(235, 216, 216);
+        background: white;
+        position: fixed;
+        top: 70px;
+        left: 500px;
+        height: 600px;
+        width: 850px;
+        transform: translate(-40%, 0%);
+    }
+    #canvas3 {
+        border: 1px solid rgb(235, 216, 216);
+        background: white;
+        position: fixed;
+        top: 70px;
+        left: 850px;
+        height: 600px;
+        width: 300px;
+        transform: translate(60%, 0%);
+    }
+
+    #colorOption {
+      height: 100px;
+      transform: translate(1050px, 100px) scale(1.2);
+      position: fixed;
+      background: none;
+    }
+
+    .row {
+      list-style: none;
+      margin: 10px 0 0 5px;
+    }
+    .options {
+      list-style-type: none;
+    }
+    .title{
+      color: rgb(9, 29, 7);
+      font-size: 20px;
+      font-style: normal;
+    }#colorSection {
+      display: flex;
+      height: 100px;
+      width: 540px;
+      transform: translate(1100px, 550px) scale(1.2);
+      position: fixed;
+      background: none;
+      color: black;
+      font-size: large;
+    }
+    
+    #colorSection label {
+      margin-right: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+  <canvas id="canvas1" width="400" height="400"></canvas>
+  <canvas id="canvas2" width="400" height="400"></canvas>
+  <canvas id="canvas3" width="400" height="400">
+    <h1></h1>
+  </canvas>
+  <div class="row" id="colorOption">
+    <label class="title">Options</label>
+    <ul class="options">
+      <li class="option active tool" id="brush">
+        <button id="brush">Brush</button>
+      </li><br>
+      <li class="option tool" id="eraser">
+        <button>Eraser</button>
+      </li><br>
+      <li class="option tool" id="clear">
+        <button>Clear</button>
+      </li><br>
+      <li class="option">
+        <input type="range" id="size-slider" min="1" max="30" value="5">
+      </li>
+    </ul>
+  </div>
+  <div id="colorSection">
+      <label for="color">color:</label>
+      <input type="color" id="colorPicker" value="" style="border-radius: 50%; width: 30px; height: 30px;">
+    </div>
+  <script src="./mesob.js"></script>
+</body>
+</html>

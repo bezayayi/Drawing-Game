@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Drawing Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        top: 100px;
+        transform: translate(0%,-700%);
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #text{
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <h1 id="heading">Panda!</h1>
+    <p id="text">Click the button below to start drawing.</p>
+    <button id="button" onclick="gotoMenuPage()">Start Drawing</button>
+
+    <script src="./script.js">
+    </script>
+  </body>
+</html>
